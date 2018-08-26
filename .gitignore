@@ -24,3 +24,7 @@ hs_err_pid*
 
 # target built files
 target/
+.classpath
+.project
+.settings/
+bin/
