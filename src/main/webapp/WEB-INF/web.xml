@@ -12,7 +12,7 @@
 		<servlet-class>HelloAppEngine</servlet-class>
 	</servlet>
 	<servlet>
-		<servlet-name>TestRestServlet</servlet-name>
+		<servlet-name>RestAPIServlet</servlet-name>
 		<servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
 		<init-param>
 			<param-name>com.sun.jersey.config.property.packages</param-name>
@@ -20,12 +20,21 @@
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
+	<!-- <servlet> <servlet-name>PagesServlet</servlet-name> <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class> 
+		<init-param> <param-name>com.sun.jersey.config.property.packages</param-name> 
+		<param-value>liuwabackend.pages</param-value> </init-param> </servlet> -->
 	<servlet-mapping>
 		<servlet-name>HelloAppEngine</servlet-name>
 		<url-pattern>/hello</url-pattern>
 	</servlet-mapping>
 	<servlet-mapping>
-		<servlet-name>TestRestServlet</servlet-name>
-		<url-pattern>/rest/*</url-pattern>
+		<servlet-name>HelloAppEngine</servlet-name>
+		<url-pattern>/hello1</url-pattern>
 	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>RestAPIServlet</servlet-name>
+		<url-pattern>/restapi/*</url-pattern>
+	</servlet-mapping>
+	<!-- <servlet-mapping> <servlet-name>PagesServlet</servlet-name> <url-pattern>/pages/*</url-pattern> 
+		</servlet-mapping> -->
 </web-app>
